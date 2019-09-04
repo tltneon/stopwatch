@@ -3,8 +3,6 @@
  * Пользователь: Neon
  * Дата: 04.09.2019
  * Время: 7:20
- * 
- * Для изменения этого шаблона используйте меню "Инструменты | Параметры | Кодирование | Стандартные заголовки".
  */
 using System;
 using System.Collections.Generic;
@@ -18,24 +16,19 @@ namespace stopwatch
 	/// </summary>
 	public partial class MainForm : Form
 	{
-		int timeM, timeS;
+		int timeMS, timeM, timeS;
 		bool isActive;
 		public MainForm()
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
-			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
 		}
 		void DrawTime(){
+			labelMS.Text = (timeMS<10 ? "0":"") + timeMS.ToString();
 			labelM.Text = (timeM<10 ? "0":"") + timeM.ToString();
 			labelS.Text = (timeS<10 ? "0":"") + timeS.ToString();
 		}
 		void ResetTime(){
+			timeMS = 0;
 			timeM = 0;
 			timeS = 0;
 			StartStop.Text = "Start";
@@ -52,7 +45,6 @@ namespace stopwatch
 				StartStop.Text = "Stop";
 				isActive = true;
 			}
-			
 		}
 		void Button2Click(object sender, EventArgs e) //reset button
 		{
@@ -61,10 +53,14 @@ namespace stopwatch
 		void Timer1Tick(object sender, EventArgs e)
 		{
 			if(isActive){
-				timeS+=1;
-				if(timeS>59){
-					timeS=0;
-					timeM+=1;
+				timeMS++;
+				if(timeMS > 99){
+					timeMS = 0;
+					timeS++;
+					if(timeS > 59){
+						timeS = 0;
+						timeM++;
+					}
 				}
 			}
 			DrawTime();
