@@ -1,0 +1,7 @@
+D:\lab\git\stopwatch\obj\Debug\ResolveAssemblyReference.cache
+D:\lab\git\stopwatch\obj\Debug\stopwatch.MainForm.resources
+D:\lab\git\stopwatch\obj\Debug\stopwatch.csproj.GenerateResource.Cache
+D:\lab\git\stopwatch\bin\Debug\stopwatch.exe
+D:\lab\git\stopwatch\bin\Debug\stopwatch.pdb
+D:\lab\git\stopwatch\obj\Debug\stopwatch.exe
+D:\lab\git\stopwatch\obj\Debug\stopwatch.pdb
