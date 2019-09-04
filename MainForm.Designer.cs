@@ -117,6 +117,7 @@ namespace stopwatch
 			// labelMS
 			// 
 			this.labelMS.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
+			this.labelMS.ForeColor = System.Drawing.Color.DimGray;
 			this.labelMS.Location = new System.Drawing.Point(215, 97);
 			this.labelMS.Name = "labelMS";
 			this.labelMS.Size = new System.Drawing.Size(69, 37);
@@ -148,11 +149,13 @@ namespace stopwatch
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.labelS);
 			this.Controls.Add(this.labelM);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Секундомер";
 			this.ResumeLayout(false);
+
 		}
 	}
 }
